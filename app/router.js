@@ -354,7 +354,7 @@ module.exports = Backbone.Router.extend({
 
     // If user has authenticated
     if (this.user) {
-      router.navigate(this.user.get('login'), {
+      router.navigate('appuri/www.appuri.com/tree/new-blog-posts/site/blog', {
         trigger: true,
         replace: true
       });

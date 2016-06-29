@@ -1383,7 +1383,7 @@
 .post .view {
   display:none;
   }
-  .post .view.active {
+  .post .view.active, .post .view.meta {
     display:block;
     }
   .post .view .code {
