@@ -1,0 +1,6 @@
+{
+  "api": "https://api.github.com",
+  "site": "https://github.com",
+  "clientId": "32cdb9348c121dbc7001",
+  "gatekeeperUrl": "https://appuri-prose-gatekeeper.azurewebsites.net"
+}
