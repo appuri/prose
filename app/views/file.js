@@ -293,8 +293,8 @@ module.exports = Backbone.View.extend({
             path = path.split(titleAttribute)[0];
           }
 
-          // Remove {{site.baseurl}}
-          path = path.replace('{{site.baseurl}}/', '/');
+          // Rebase the image to the path in github, not where it will be displayed
+          path = path.replace('images/blog', '/site/images/blog');
 
           // Prepend directory path if not site root relative
           path = /^\//.test(path) ? path.slice(1) :
@@ -1365,7 +1365,7 @@ module.exports = Backbone.View.extend({
     this.collection.upload(file, content, uploadPath, {
       success: (function(model, res, options) {
         var name = res.content.name;
-        var path = '{{site.baseurl}}/' + res.content.path;
+        var path = res.content.path;
 
         // Take the alt text from the insert image box on the toolbar
         var $alt = $('input[name="alt"]');

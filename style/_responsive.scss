@@ -8,12 +8,14 @@
     .editor {
       display: flex;
       align-items: flex-start;
+      justify-content: center;
       .edit, .preview {
         flex: 3;
       }
       .meta {
         flex: 1;
-        margin-right: 15px;
+        margin: 0 15px;
+        max-width: 840px;
       }
     }
   }
@@ -207,7 +209,7 @@ and (max-device-width:480px) {
   .post .view .code,
   .editor {
     padding:0;
-    }
+  }
 
   /* Disable fixed positioning of the topbar as its wacky for touch */
   .topbar.fixed {
@@ -275,6 +277,7 @@ and (max-device-width:480px) {
 
   .post .view.meta {
     width:80%;
+    margin-bottom: 20px;
     }
     .meta .form-item,
     .meta .form {
