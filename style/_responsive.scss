@@ -2,13 +2,30 @@
   Media Queries
 ---------------------------------------------*/
 
+@media all and (min-width:1601px) {
+  .post.limiter {
+    width: 100%;
+    .editor {
+      display: flex;
+      align-items: flex-start;
+      .edit, .preview {
+        flex: 3;
+      }
+      .meta {
+        flex: 1;
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
 /* Screen sizes > 1241px --------------------- */
-@media all and (min-width:1401px) {
+@media all and (min-width:1401px) and (max-width:1600px) {
   .containment,
   .limiter {
     width: 100%;
     min-width: 680px;
-    max-width: 840px;
+    max-width: 1024px;
   }
 }
 
@@ -85,8 +102,7 @@
   }
 
   .limiter {
-    width: 70%;
-    margin: 0;
+    width: 80%;
   }
 
   .fixed .containment {
