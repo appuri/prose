@@ -19,6 +19,11 @@
       }
     }
   }
+  .application {
+    width: 70%;
+    padding-right: 0;
+    margin: 20px 60px;
+  }
 }
 
 /* Screen sizes > 1241px --------------------- */
@@ -28,6 +33,9 @@
     width: 100%;
     min-width: 680px;
     max-width: 1024px;
+  }
+  .application {
+    padding-right: 13%;
   }
 }
 

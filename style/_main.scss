@@ -202,8 +202,8 @@
   z-index:1000;
   top:0;
   right:-100%;
-  width:280px;
-  padding-right:60px;
+  width: 420px;
+  padding-right:0;
   height:100%;
   overflow:auto;
   overflow-x:hidden;
@@ -228,7 +228,7 @@
   Global Styles
 ---------------------------------------------*/
 .application {
-  padding:0 0 60px;
+  padding:0 20% 60px 0;
   }
 
 .dropdown-menu.prose-menu {
@@ -311,7 +311,7 @@
   border-left:1px solid #fff;
   }
   .open + #navigation {
-    border-color:#d4d7d9;
+    display: none;
     }
 
 /* By default they are off */
