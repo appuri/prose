@@ -15,7 +15,7 @@ module.exports = Backbone.Model.extend({
       return !!options.clone;
     };
 
-    this.placeholder = new Date().format('Y-m-d') + '-your-filename.md';
+    this.placeholder = 'new-post.md';
     var path = attributes.path.split('?')[0];
 
     // Append placeholder name if file is new and
@@ -103,6 +103,9 @@ module.exports = Backbone.Model.extend({
       try {
         // TODO: _.defaults for each key
         res.metadata = jsyaml.safeLoad(frontmatter);
+        if (res.metadata.date instanceof Date) {
+          res.metadata.date.setTimezone('UTC')
+        }
 
         // Default to published unless explicitly set to false
         res.metadata.published = !regex.test(frontmatter);

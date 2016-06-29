@@ -37,7 +37,11 @@ module.exports = Backbone.View.extend({
   },
 
   setValue: function(value) {
-    this.$form.val(value);
+    if (value && typeof value.toISOString === 'function') {
+      this.$form.val(value.format('Y-m-d'))
+    } else {
+      this.$form.val(value);
+    }
   }
 
 });
