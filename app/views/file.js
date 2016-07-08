@@ -294,7 +294,7 @@ module.exports = Backbone.View.extend({
           }
 
           // Rebase the image to the path in github, not where it will be displayed
-          path = path.replace('images/blog', '/site/images/blog');
+          path = path.replace('images/blog', 'site/images/blog');
 
           // Prepend directory path if not site root relative
           path = /^\//.test(path) ? path.slice(1) :
