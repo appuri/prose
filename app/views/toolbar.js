@@ -400,7 +400,7 @@ module.exports = Backbone.View.extend({
       } else {
         var src = $('input[name="url"]').val();
         var alt = $('input[name="alt"]').val();
-        this.view.editor.replaceSelection('![' + alt + '](' + src + ')');
+        this.view.editor.replaceSelection('![' + alt + '](' + src.replace(/^site/, '') + ')');
         this.view.editor.focus();
       }
     }
